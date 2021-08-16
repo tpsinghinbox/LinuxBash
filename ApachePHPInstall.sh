@@ -153,6 +153,8 @@ echo ""
 sed -i 's/SecRequestBodyLimit .*/SecRequestBodyLimit 2147483647/' /etc/httpd/conf.d/mod_security.conf
 sed -i 's/SecRequestBodyNoFilesLimit .*/SecRequestBodyNoFilesLimit 21474/' /etc/httpd/conf.d/mod_security.conf
 sed -i 's/SecRequestBodyInMemoryLimit .*/SecRequestBodyInMemoryLimit 21474836/' /etc/httpd/conf.d/mod_security.conf
+#filename validation
+sed -i 's/SecRule MULTIPART_STRICT_ERROR "!@eq 0" .*/#SecRule MULTIPART_STRICT_ERROR "!@eq 0" \\ /' /etc/httpd/conf.d/mod_security.conf
 #Recheck this flag
 sed -i 's/SecRule MULTIPART_UNMATCHED_BOUNDARY .*/#SecRule MULTIPART_UNMATCHED_BOUNDARY \\ /' /etc/httpd/conf.d/mod_security.conf
 
