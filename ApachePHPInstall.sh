@@ -144,7 +144,6 @@ sed -i 's/max_execution_time = .*/max_execution_time = 300/' /etc/php.ini
 sed -i 's/max_file_uploads = .*/max_file_uploads = 100/' /etc/php.ini
 sed -i 's/short_open_tag = .*/short_open_tag = On/' /etc/php.ini
 sed -i 's/expose_php = .*/expose_php = Off/' /etc/php.ini
-sed -i 's/max_execution_time = .*/max_execution = 120/' /etc/php.ini
 sed -i 's/memory_limit = .*/memory_limit = 1024M/' /etc/php.ini
 sed -i 's/display_errors = .*/display_errors = Off/' /etc/php.ini
 
