@@ -6,10 +6,11 @@ echo "                                                                "
 echo "		    APACHE & PHP 7 CONFIGURE IN CENTOS7               "
 echo "                                                                "
 echo "================================================================"
-#rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+
 rpm -Uvh http://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 yum update -y
-yum install epel-release vim wget expect firewalld httpd mod_ssl php70w.x86_64 php70w-mcrypt policycoreutils-python -y
+yum install epel-release -y 
+yum install vim wget expect firewalld httpd mod_ssl php70w.x86_64 php70w-mcrypt policycoreutils-python -y
 yum --enablerepo=epel install mod_security mod_evasive -y
 systemctl start httpd && systemctl enable httpd && systemctl status httpd
 systemctl start firewalld && systemctl enable firewalld
