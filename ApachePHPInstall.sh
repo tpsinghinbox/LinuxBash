@@ -171,7 +171,7 @@ echo ""
 firewall-cmd --permanent --add-service=https --zone=trusted &&
 firewall-cmd --permanent --remove-service=http --zone=public &&
 firewall-cmd --permanent --remove-service=https --zone=public &&
-firewall-cmd --set-default-zone=trusted &&
+firewall-cmd --set-default-zone=public &&
 firewall-cmd --reload
 systemctl restart httpd && systemctl status httpd -l
 echo ""
