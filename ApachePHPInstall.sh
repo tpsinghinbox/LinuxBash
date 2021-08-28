@@ -12,7 +12,8 @@ yum update -y
 yum install epel-release -y 
 rpm -Uvh http://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 yum install vim wget expect firewalld httpd mod_ssl php70w.x86_64 php70w-mcrypt policycoreutils-python -y
-yum --enablerepo=epel install mod_security mod_evasive -y
+#yum --enablerepo=epel install mod_security mod_evasive -y
+yum --enablerepo=epel install mod_security mod_evasive mod_security_crs -y
 systemctl start httpd && systemctl enable httpd && systemctl status httpd
 systemctl start firewalld && systemctl enable firewalld
 sudo sed -i 's/SELINUX=disabled.*/SELINUX=enabled/' /etc/selinux/config  
