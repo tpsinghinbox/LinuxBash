@@ -139,6 +139,7 @@ echo ""
 echo "Configure PHP.INI"
 echo "================================================="
 echo ""
+cp /etc/php.ini /etc/php.ini.back
 sed -i 's/upload_max_filesize = .*/upload_max_filesize = 2048M/' /etc/php.ini
 sed -i 's/post_max_size = .*/post_max_size = 2048M/' /etc/php.ini
 sed -i 's/max_execution_time = .*/max_execution_time = 300/' /etc/php.ini
@@ -151,6 +152,7 @@ sed -i 's/display_errors = .*/display_errors = Off/' /etc/php.ini
 echo "Configure Mod Security"
 echo "=============================="
 echo ""
+cp /etc/httpd/conf.d/mod_security.conf /etc/httpd/conf.d/mod_security.conf.back
 sed -i 's/SecRequestBodyLimit .*/SecRequestBodyLimit 2147483647/' /etc/httpd/conf.d/mod_security.conf
 sed -i 's/SecRequestBodyNoFilesLimit .*/SecRequestBodyNoFilesLimit 21474/' /etc/httpd/conf.d/mod_security.conf
 sed -i 's/SecRequestBodyInMemoryLimit .*/SecRequestBodyInMemoryLimit 21474836/' /etc/httpd/conf.d/mod_security.conf
