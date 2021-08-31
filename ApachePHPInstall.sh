@@ -61,9 +61,9 @@ Header always append X-Frame-Options SAMEORIGIN
     SSLCertificateKeyFile /etc/ssl/private/$VDOMAIN.key
     ServerAdmin abc@$VDOMAIN
     ServerName $VDOMAIN
-    SetEnv DB_NAME agent
-    SetEnv DB_PASS HGet$^%2(826lkSrwNbdFg2#%
-    SetEnv DB_USER root
+    SetEnv DB_NAME DBNAME
+    SetEnv DB_PASS DBPASS
+    SetEnv DB_USER DBUSER
     setEnv BASE_DIR $randomfile
     DocumentRoot /var/www/html/$randomfile
     <Directory /var/www/html/$randomfile>
