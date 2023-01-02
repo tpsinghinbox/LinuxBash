@@ -2,7 +2,7 @@
 #--------------------------------------------
 #Copy first Crt file issue by SSL Provider
 #Pvt Key gen during CSR 
-#ca-bundele
+#ca-bundele issue by SSL Provider
 #--------------------------------------------
 echo ""
 echo "================================================================"
